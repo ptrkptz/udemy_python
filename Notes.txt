@@ -1,0 +1,45 @@
+Python
+MAC
+	default loaded with Python 2, to run Python 3, at the terminal type 'python3'
+	>>> = python interpreter
+	
+Section 2 - 7
+length
+	len(myString)
+
+get element
+	use []
+	use -1 is last character
+
+mix length and element
+	myString[len(myString)-1]
+		this will get the last character
+
+myString="PR10124578"
+
+myString[-2:]
+	This will return everything behind 2nd to last character
+		'78'
+myString[:3]
+	this will return first 3
+		'PR1'
+
+Convert number to string
+	"user" + str(124)
+		str() changes number to string
+
+
+Section 8
+round(4.8775, 2)
+	2 = number of decimal
+
+Import functions
+
+import math
+	google python math
+math.factorial(5)
+	5*4*3*2*1
+math.ceil()
+	rounds up
+math.floor
+	rounds down
