@@ -43,3 +43,82 @@ math.ceil()
 	rounds up
 math.floor
 	rounds down
+
+11.
+Tuples - immutable
+months = ("January","February","March")
+
+Lists = ["John", "Mary", "Steve"]
+
+insert
+- students.insert(0,"Tom")
+append
+- students.append("Kate")
+pop
+ - students.pop()
+ 	removes last
+ - students.pop(1)
+ 	remove index 1 item
+remove
+ - students.remove("Mary")
+'merge to lists together'
+students + students2
+
+13 data dictionary
+[] = list
+	person = ["John", "Green", "1980","Canada"]
+{} = dictionary
+	need key value pair
+	>>> person = {"first_name": "John", "last_name": "Green", "birth_year": "1980", "country": "Canada"}
+
+	- checkt the data type
+		>>> type(person)
+		<class 'dict'>
+
+	To get the 'first name'
+		>>> person["first_name"]
+		'John'
+
+	Change value
+		>>> person["birth_year"] = 1979
+
+	Add value
+		>>> person["marital_status"] = "Married"
+
+	See full dictionary
+		>>> person
+		{'first_name': 'John', 'last_name': 'Green', 'birth_year': 1979, 'country': 'Canada', 'marital_status': 'Married'}
+
+	Add list of to dictionary
+		person["children"] = ["Nathalie","Ethan"]
+
+	Alter list of a property
+		>>> person["children"].append("Anna")
+		>>> person
+		{'first_name': 'John', 'last_name': 'Green', 'birth_year': 1979, 'country': 'Canada', 'marital_status': 'Married', 'children': ['Nathalie', 'Ethan', 'Anna']}
+
+	Get function
+		so if the property is found, return, if not, return a message
+			>>> person.get("age", "Not found")
+			'Not found'
+			>>> person.get("country","not found")
+			'Canada'
+
+	Set variable equal to property name
+		>>> Key="first_name"
+		>>> person[Key]
+		'John'	
+
+	Erase from dictionary
+		>>> person.clear()
+		>>> person
+		{}
+		>>>
+
+	NOTE:  on 14_Dictionary.py exercise... there is a '.lower()'... this will transpose any user input to all lowercase
+
+15 - Booleans
+	when setting, do not quote (not a string) and first letter must be upper case
+	** Python uses ':' instead of curly braces **
+	
+
