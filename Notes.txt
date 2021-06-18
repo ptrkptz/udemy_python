@@ -121,4 +121,5 @@ students + students2
 	when setting, do not quote (not a string) and first letter must be upper case
 	** Python uses ':' instead of curly braces **
 	
-
+16 - Conditionals
+	
