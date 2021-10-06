@@ -122,4 +122,8 @@ students + students2
 	** Python uses ':' instead of curly braces **
 	
 16 - Conditionals
+	else if
+17 - and /or
+
+20 - loops
 	
