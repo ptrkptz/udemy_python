@@ -126,4 +126,32 @@ students + students2
 17 - and /or
 
 20 - loops
-	
+
+28 - matplotlib
+		#python-requests.org/en/master
+		    #https request
+		#wxpython.org
+		    # GUI
+		#sqlalchemy.org
+		    #sq db
+		#sciphy.org
+		    #algorithm and math tools 
+		#pygame.org
+		    #used to create games
+		#scikit-learn.org
+		    #machine learning
+
+		#intall matplotlob
+		    #cmd line 
+		    # pip install matplotlib
+		        # will install automatically as part of the python install
+		        # I needed to upgrade PIP - c:\python38\python.exe -m pip install --upgrade pip
+
+30 - requests
+	200 = ok
+	403 = forbidden
+		authentication or missing api key
+	404 = Not found
+
+32 - install pprint
+		helps output dictionary values

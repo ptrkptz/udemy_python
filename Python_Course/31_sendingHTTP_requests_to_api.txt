@@ -1,0 +1,4 @@
+https://opentdb.com/api_config.php
+    A place to get trivia
+
+Added Chrome extension 'JSONView' to chrome
