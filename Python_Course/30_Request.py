@@ -1,8 +1,8 @@
 import requests
 r=requests.get("https://www.google.com")
-r.status_code
-r.headers
+print(r.status_code)
+print(r.headers)
 
-r.headers["Date"]
+print("Date: " + r.headers["Date"])
 
-r.text
+print(r.text)
