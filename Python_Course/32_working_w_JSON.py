@@ -1,12 +1,17 @@
-import requests
+""" import requests
 import pprint
 r = requests.get("https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=multiple")
 
 r.status_code
 r.text
-type(r.text)
+type(r.text) """
 
+#  seperate run
 import json
+import requests
+import pprint
+r = requests.get("https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=multiple")
+
 question = json.loads(r.text)
 type(question)
 
