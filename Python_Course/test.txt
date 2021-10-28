@@ -1,0 +1,2 @@
+This is some new text2
+Now we appended.

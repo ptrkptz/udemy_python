@@ -1,39 +1,68 @@
 import json
 import requests
-import pprint
+import random
+import html
 
+url = "https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=multiple"
 print("We are going to play a trivia game.")
 print("Game will continue until 'q' (quit) is typed.")
+print("")
 
-while True:
-    r = requests.get("https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=multiple")
-    requestQuestion = json.loads(r.text)
-    question = requestQuestion['results'][0]['question']
-    pprint.pprint(question)
+score_correct = 0
+score_incorrect = 0
 
-    others = []
-    correct = requestQuestion['results'][0]['correct_answer']
-    #others = requestQuestion['results'][0]['incorrect_answer']
+continuePlaying = ""
 
-    choices = []
-    choices.append(correct)
+while continuePlaying!='q':
+    r = requests.get(url)
+    if (r.status_code !=200):
+        print("Error from the api, quitting!")
+        userContinue = 'q'
+    else:
+        valid_Choice = False
+        requestQuestion = json.loads(r.text)
+        question = requestQuestion['results'][0]['question']
+        correct = requestQuestion['results'][0]['correct_answer']
+        others = requestQuestion['results'][0]['incorrect_answers']
 
-    for x in requestQuestion['results'][0]['incorrect_answer']:
-        print(x)
-        choices.append(requestQuestion['results'][0]['incorrect_answer'][x])
-    
+        choices = []
+        choices.append(correct)
+        for i in others:
+            choices.append(i)
 
-    #pprint.pprint(requestQuestion['results'][0]['correct_answer'])
-    #pprint.pprint(requestQuestion['results'][0]['incorrect_answers'])
+        random.shuffle(choices)
 
-    for y in choices:
-        choices[y]
+    print(html.unescape(question)  + "\n")
 
-    print("")
-    userContinue = input("Continue -- 'q' to quit, any key to see new question? ")
+    choiceNum = 0
+    for choice in choices:
+        choiceNum +=1
+        print(str(choiceNum) + ": "+ html.unescape(choice))
+        if choice == correct:
+            correctNum = choiceNum
 
+    while valid_Choice == False:
+        userChoice = input("\nWhich number is your answer: ")
+        try:
+            userChoice = int(userChoice)
+            if userChoice >len(choices) or userChoice<=0:
+                print("Invalid answer")
+            else:
+                valid_Choice = True
+        except:
+            print("Invalid answer, only numbers allowed")
 
-    if userContinue.lower() == 'q':
-           break
+    if int(userChoice) == correctNum:
+        print("You nailed it!!" + "\n")
+        score_correct +=1
+    else:
+        print("Incorrect, the correct answer is: " + correct)
+        score_incorrect +=1
 
-print("Thanks for playing")
+    print("\n# # # # # # # # # # #")
+    print("Running score -- correct: " +str(score_correct)+ " ~ incorrect: " +str(score_incorrect))
+    print("# # # # # # # # # # #")
+
+    continuePlaying = input("\nContinue? -- 'q' to quit, any key to see new question? ").lower()
+
+print("\nThanks for playing")
