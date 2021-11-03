@@ -1,0 +1,4 @@
+To see Jupyter shortcuts
+    Ctrl + shift + P
+
+    then you can refine it down, ex: type Run, to find the shortcut

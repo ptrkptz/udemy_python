@@ -1,0 +1,7 @@
+36_notes
+
+pip install pandas
+pip install xlrd
+
+course did not stat, but error message told me:
+pip install openpyxl

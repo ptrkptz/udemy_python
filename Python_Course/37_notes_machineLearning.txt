@@ -1,0 +1,14 @@
+
+
+pip install scipy
+pip install scikit-learn
+pip install ipython
+# installs jupyter notebook
+pip install "ipython[notebook]"
+    # to execute: jupyter notebook
+
+opens a new browser
+to create new file... use the 'New' in the corner
+
+
+See jupyter folder
