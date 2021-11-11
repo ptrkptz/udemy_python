@@ -155,3 +155,57 @@ students + students2
 
 32 - install pprint
 		helps output dictionary values
+
+44 Machine Learning
+	supervised vs unsupervised
+		supervised - Iris
+			we gave observations and answers
+			Classification
+				categoric predictions (Iris)
+				Popular algorithms
+					KNN
+					Logistic Regression
+					Naive Bayes
+					Decision Tree
+					Random Forest
+
+			Regression
+				numeric prediction
+
+				Popular algorithms
+					linear regression
+					svm (support vector machine)
+					lasso regression 
+
+		unsupervised
+			no answers
+			so it does clustering
+				group of datapoints
+
+			Popular algorithms
+				K-Means
+				Affinity Propagation
+				OPTICS
+				Spectral Clustering
+				BIRCH
+				DBSCAN
+
+			Association
+				if cust buys product a they usually buy product b
+					Popular algorithms
+						Apriori
+						Eclat
+						FP-growth
+
+Books
+	Find books by publisher 'Springer'
+
+	An intro to Statistical learn using R
+	Python:
+		O'Reilly - Intro to machine learning w/ Python
+
+
+
+repl.it
+	create acct
+	
